@@ -2,6 +2,11 @@ version: '3.9'
 
 services:
   web:
-    image: "trainwithshubham/node-app-test-new:latest"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kelvin
+    container_name: app
+    working_dir: app
     ports:
       - "8000:8000"
